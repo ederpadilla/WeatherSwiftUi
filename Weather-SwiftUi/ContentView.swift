@@ -20,8 +20,6 @@ struct ContentView: View {
                                   weight: .medium,
                                   design: .default))
                     .foregroundColor(.white)
-                    .background(Color.red)
-                    .frame(width: 200, height: 200)
             }
         }
     }
