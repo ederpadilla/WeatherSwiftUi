@@ -36,7 +36,9 @@ struct ContentView: View {
                 }
                 
                 HStack {
-                    WeatherDayView()
+                    WeatherDayView(dayOfTheWeeek: "Mon",
+                                   imageName: "cloud.sun.bolt.fill",
+                                   temperature: 36)
                 }
                 Spacer()
             }
@@ -51,21 +53,25 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct WeatherDayView: View {
+    var dayOfTheWeeek: String
+    var imageName: String
+    var temperature: Int
+    
     var body: some View {
         VStack {
-            Text("Tue")
+            Text(dayOfTheWeeek)
                 .font(.system(size: 16,
                               weight: .medium))
                 .foregroundColor(.white)
             
-            Image(systemName: "cloud.sun.fill")
+            Image(systemName: imageName)
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
                 .clipped()
             
-            Text("76°")
+            Text("\(temperature)°")
                 .font(.system(size: 28,
                               weight: .medium))
                 .foregroundColor(.white)
