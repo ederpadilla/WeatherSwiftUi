@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var weatherUi = WeatherUi()
+    
     var body: some View {
         ZStack {
-            BackgroundView(topColor: .blue,
-                           bottomColor: Color("lightBlue"))
+            BackgroundView(topColor: weatherUi.isNight ? .black : .blue,
+                           bottomColor: weatherUi.isNight ? .gray : Color("lightBlue"))
             VStack {
                 CityNameTextView(name: "Toluca, MX")
                 
                 WeatherImage(spacing: 10,
-                             image: "cloud.sun.fill",
+                             image: weatherUi.isNight ? "moon.circle.fill" : "cloud.sun.fill",
                              text: "76°C")
                 
                 HStack(spacing: 20) {
@@ -38,10 +41,17 @@ struct ContentView: View {
                 }
                 Spacer()
                 
-                WeatherButton(cornerRadius: 10,
-                              text: "Change 🌪",
-                              backgroundColor: .white,
-                              textColor: .green)
+                Button {
+                    weatherUi.isNight.toggle()
+                    print("🚀🚀🚀🚀 Hello World 🚀🚀🚀🚀")
+                } label: {
+                    Text("Change 🌪")
+                        .frame(width: 280, height: 50)
+                        .background(.white)
+                        .foregroundColor(.green)
+                        .font(.system(size: 20, weight: .bold))
+                        .cornerRadius(10)
+                }
                 
                 Spacer()
             }
