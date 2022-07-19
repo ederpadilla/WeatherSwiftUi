@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         ZStack {
             BackgroundView(topColor: .blue,
@@ -49,10 +50,18 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+class ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+    
+#if DEBUG
+    @objc class func injected() {
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        windowScene?.windows.first?.rootViewController =
+        UIHostingController(rootView: ContentView())
+    }
+#endif
 }
 
 struct BackgroundView: View {
