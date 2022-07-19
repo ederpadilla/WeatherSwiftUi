@@ -15,7 +15,7 @@ struct ContentView: View {
             VStack {
                 CityNameTextView(name: "Toluca, MX")
                 
-                WeatherImage(spacing: 8,
+                WeatherImage(spacing: 10,
                              image: "cloud.sun.fill",
                              text: "76°C")
                 
@@ -38,15 +38,10 @@ struct ContentView: View {
                 }
                 Spacer()
                 
-                Button {
-                    print("🚀🚀🚀🚀 Hello World 🚀🚀🚀🚀")
-                } label: {
-                    Text("Change Time 🌪")
-                        .frame(width: 280, height: 50)
-                        .background(.white)
-                        .font(.system(size: 20, weight: .bold))
-                        .cornerRadius(8.0)
-                }
+                WeatherButton(cornerRadius: 10,
+                              text: "Change 🌪",
+                              backgroundColor: .white,
+                              textColor: .green)
                 
                 Spacer()
             }
@@ -132,6 +127,26 @@ struct WeatherDayView: View {
                 .font(.system(size: 28,
                               weight: .medium))
                 .foregroundColor(.white)
+        }
+    }
+}
+
+struct WeatherButton: View {
+    var cornerRadius: CGFloat
+    var text: String
+    var backgroundColor: Color
+    var textColor: Color
+    
+    var body: some View {
+        Button {
+            print("🚀🚀🚀🚀 Hello World 🚀🚀🚀🚀")
+        } label: {
+            Text(text)
+                .frame(width: 280, height: 50)
+                .background(backgroundColor)
+                .foregroundColor(textColor)
+                .font(.system(size: 20, weight: .bold))
+                .cornerRadius(cornerRadius)
         }
     }
 }
