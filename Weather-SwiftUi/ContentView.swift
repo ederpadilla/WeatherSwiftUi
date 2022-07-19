@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            BackgroundView(isNight: $weatherUi.isNight)
+            BackgroundView(isNight: weatherUi.isNight)
             VStack {
                 CityNameTextView(name: "Toluca, MX")
                 
@@ -21,9 +21,9 @@ struct ContentView: View {
                              image: weatherUi.isNight ? "moon.circle.fill" : "cloud.sun.fill",
                              text: "76°C")
                 
-                HStack(spacing: 20) {                    
-                    ForEach(weatherUi.isNight ? $weatherUi.nightDays : $weatherUi.sunnyDays) { $day in
-                        WeatherDayView(weatherDayUi: $day)
+                HStack(spacing: 20) {
+                    ForEach(weatherUi.isNight ? weatherUi.nightDays : weatherUi.sunnyDays) { day in
+                        WeatherDayView(weatherDayUi: day)
                     }
                 }
                 
@@ -48,14 +48,14 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct BackgroundView: View {
-    @Binding var isNight: Bool
+    var isNight: Bool
     
     var body: some View {
         LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue,
                                                    isNight ? .gray : Color("lightBlue")]),
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing)
-            .edgesIgnoringSafeArea(.all)
+            .ignoresSafeArea()
     }
 }
 
@@ -96,7 +96,7 @@ struct WeatherImage: View {
 }
 
 struct WeatherDayView: View {
-    @Binding var weatherDayUi: WeatherDayUi
+    var weatherDayUi: WeatherDayUi
     
     var body: some View {
         VStack {
