@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct WeatherButton: View {
+    @Binding var isNight: Bool
     var cornerRadius: CGFloat
     var text: String
     var backgroundColor: Color
@@ -14,6 +15,7 @@ struct WeatherButton: View {
     
     var body: some View {
         Button {
+            isNight.toggle()
             print("🚀🚀🚀🚀 Hello World 🚀🚀🚀🚀")
         } label: {
             Text(text)

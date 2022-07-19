@@ -29,17 +29,11 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Button {
-                    weatherUi.isNight.toggle()
-                    print("🚀🚀🚀🚀 Hello World 🚀🚀🚀🚀")
-                } label: {
-                    Text("Change 🌪")
-                        .frame(width: 280, height: 50)
-                        .background(.white)
-                        .foregroundColor(.green)
-                        .font(.system(size: 20, weight: .bold))
-                        .cornerRadius(10)
-                }
+                WeatherButton(isNight: $weatherUi.isNight,
+                              cornerRadius: 10,
+                              text: "Change 🌪",
+                              backgroundColor: .white,
+                              textColor: .gray)
                 
                 Spacer()
             }
