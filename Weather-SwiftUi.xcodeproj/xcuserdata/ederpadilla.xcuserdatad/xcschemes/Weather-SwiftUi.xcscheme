@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E6EE6581288633EE0066C12C"
+               BuildableName = "Weather-SwiftUi.app"
+               BlueprintName = "Weather-SwiftUi"
+               ReferencedContainer = "container:Weather-SwiftUi.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E6EE6581288633EE0066C12C"
+            BuildableName = "Weather-SwiftUi.app"
+            BlueprintName = "Weather-SwiftUi"
+            ReferencedContainer = "container:Weather-SwiftUi.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>

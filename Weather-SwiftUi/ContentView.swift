@@ -20,6 +20,9 @@ struct ContentView: View {
                                   weight: .medium,
                                   design: .default))
                     .foregroundColor(.white)
+                    .padding(.bottom, 100)
+                    .padding(.leading, 100)
+                Spacer()
             }
         }
     }
