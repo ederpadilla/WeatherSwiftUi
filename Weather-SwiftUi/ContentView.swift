@@ -10,18 +10,11 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.blue,
-                                                       Color("lightBlue")]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
+            BackgroundView(topColor: .blue,
+                           bottomColor: Color("lightBlue"))
             VStack {
-                Text("Toluca, MX")
-                    .font(.system(size: 32,
-                                  weight: .medium,
-                                  design: .default))
-                    .foregroundColor(.white)
-                    .padding()
+                CityNameTextView(name: "Toluca, MX")
+                
                 VStack(spacing: 8) {
                     Image(systemName: "cloud.sun.fill")
                         .renderingMode(.original)
@@ -75,6 +68,31 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct BackgroundView: View {
+    var topColor: Color
+    var bottomColor: Color
+    
+    var body: some View {
+        LinearGradient(gradient: Gradient(colors: [topColor,
+                                                   bottomColor]),
+                       startPoint: .topLeading,
+                       endPoint: .bottomTrailing)
+            .edgesIgnoringSafeArea(.all)
+    }
+}
+
+struct CityNameTextView: View {
+    var name: String
+    var body: some View {
+        Text(name)
+            .font(.system(size: 32,
+                          weight: .medium,
+                          design: .default))
+            .foregroundColor(.white)
+            .padding()
     }
 }
 
