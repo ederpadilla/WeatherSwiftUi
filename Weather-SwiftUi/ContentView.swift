@@ -15,20 +15,9 @@ struct ContentView: View {
             VStack {
                 CityNameTextView(name: "Toluca, MX")
                 
-                VStack(spacing: 8) {
-                    Image(systemName: "cloud.sun.fill")
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 180, height: 180)
-                        .clipped()
-                    
-                    Text("76°C")
-                        .font(.system(size: 70,
-                                      weight: .medium))
-                        .foregroundColor(.white)
-                }
-                .padding(.bottom, 40)
+                WeatherImage(spacing: 8,
+                             image: "cloud.sun.fill",
+                             text: "76°C")
                 
                 HStack(spacing: 20) {
                     WeatherDayView(dayOfTheWeeek: "Mon",
@@ -93,6 +82,30 @@ struct CityNameTextView: View {
                           design: .default))
             .foregroundColor(.white)
             .padding()
+    }
+}
+
+struct WeatherImage: View {
+    var spacing: CGFloat
+    var image: String
+    var text: String
+    
+    
+    var body: some View {
+        VStack(spacing: spacing) {
+            Image(systemName: image)
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 180, height: 180)
+                .clipped()
+            
+            Text(text)
+                .font(.system(size: 70,
+                              weight: .medium))
+                .foregroundColor(.white)
+        }
+        .padding(.bottom, 40)
     }
 }
 
