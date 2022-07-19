@@ -35,8 +35,7 @@ struct ContentView: View {
                                       weight: .medium))
                         .foregroundColor(.white)
                 }
-                
-                Spacer()
+                .padding(.bottom, 40)
                 
                 HStack(spacing: 20) {
                     WeatherDayView(dayOfTheWeeek: "Mon",
