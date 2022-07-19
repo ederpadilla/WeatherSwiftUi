@@ -18,8 +18,8 @@ struct ContentView: View {
                 CityNameTextView(name: "Toluca, MX")
                 
                 WeatherImage(spacing: 10,
-                             image: weatherUi.isNight ? "moon.circle.fill" : "cloud.sun.fill",
-                             text: "76°C")
+                             text: "76°C",
+                             isNight: weatherUi.isNight)
                 
                 HStack(spacing: 20) {
                     ForEach(weatherUi.isNight ? weatherUi.nightDays : weatherUi.sunnyDays) { day in
@@ -73,23 +73,25 @@ struct CityNameTextView: View {
 
 struct WeatherImage: View {
     var spacing: CGFloat
-    var image: String
     var text: String
+    var isNight: Bool
     
     
     var body: some View {
         VStack(spacing: spacing) {
-            Image(systemName: image)
+            Image(systemName: isNight ? "moon.circle.fill" : "cloud.sun.fill")
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 180, height: 180)
                 .clipped()
             
-            Text(text)
-                .font(.system(size: 70,
-                              weight: .medium))
-                .foregroundColor(.white)
+            if isNight {
+                Text(text)
+                    .font(.system(size: 70,
+                                  weight: .medium))
+                    .foregroundColor(.white)
+            }
         }
         .padding(.bottom, 40)
     }
@@ -113,6 +115,7 @@ struct WeatherDayView: View {
                 //.aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
                 .clipped()
+                
             
             Text("\(weatherDayUi.temperature)°")
                 .font(.system(size: 28,
