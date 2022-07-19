@@ -55,6 +55,18 @@ struct ContentView: View {
                                    temperature: 36)
                 }
                 Spacer()
+                
+                Button {
+                    print("🚀🚀🚀🚀 Hello World 🚀🚀🚀🚀")
+                } label: {
+                    Text("Change Time 🌪")
+                        .frame(width: 280, height: 50)
+                        .background(.white)
+                        .font(.system(size: 20, weight: .bold))
+                        .cornerRadius(8.0)
+                }
+                
+                Spacer()
             }
         }
     }
