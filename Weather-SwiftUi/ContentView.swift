@@ -106,9 +106,11 @@ struct WeatherDayView: View {
                 .foregroundColor(.white)
             
             Image(systemName: weatherDayUi.imageName)
-                .renderingMode(.original)
+                //.symbolRenderingMode(.palette)
+                .symbolRenderingMode(.multicolor)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .foregroundStyle(.white, .gray, .black)
+                //.aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
                 .clipped()
             

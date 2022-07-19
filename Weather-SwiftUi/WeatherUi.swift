@@ -21,7 +21,7 @@ struct WeatherUi {
                                                    imageName: "moon.stars.fill",
                                                    temperature: 12),
                                       WeatherDayUi(dayOfWeek: "SUN",
-                                                   imageName: "moon.circle",
+                                                   imageName: "cloud.hail.fill",
                                                    temperature: 12),
                                       WeatherDayUi(dayOfWeek: "MON",
                                                    imageName: "cloud.drizzle.fill",
