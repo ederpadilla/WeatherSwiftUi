@@ -12,4 +12,8 @@ extension Font {
     static func quickSand(with size: CGFloat = 27) -> Font {
         .custom("Quicksand", size: size)
     }
+    
+    static func bodyBold(with size: CGFloat = 27) -> Font {
+        .custom("SF-Pro-Text-Bold", size: size)
+    }
 }

@@ -12,6 +12,7 @@
 		E68BA8B6288874CE00EAE49B /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68BA8B5288874CE00EAE49B /* Color+Extension.swift */; };
 		E68BA8DE2888941000EAE49B /* Quicksand.otf in Resources */ = {isa = PBXBuildFile; fileRef = E68BA8DD2888941000EAE49B /* Quicksand.otf */; };
 		E68BA8E12888979D00EAE49B /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68BA8E02888979D00EAE49B /* Font+Extension.swift */; };
+		E68BA8E32888982200EAE49B /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E68BA8E22888982200EAE49B /* SF-Pro-Text-Bold.otf */; };
 		E6EE6586288633EE0066C12C /* Weather_SwiftUiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE6585288633EE0066C12C /* Weather_SwiftUiApp.swift */; };
 		E6EE6588288633EE0066C12C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE6587288633EE0066C12C /* ContentView.swift */; };
 		E6EE658A288633EF0066C12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EE6589288633EF0066C12C /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		E68BA8DD2888941000EAE49B /* Quicksand.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Quicksand.otf; sourceTree = "<group>"; };
 		E68BA8DF2888942400EAE49B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E68BA8E02888979D00EAE49B /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		E68BA8E22888982200EAE49B /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		E6EE6582288633EE0066C12C /* Weather-SwiftUi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather-SwiftUi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EE6585288633EE0066C12C /* Weather_SwiftUiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_SwiftUiApp.swift; sourceTree = "<group>"; };
 		E6EE6587288633EE0066C12C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 		E68BA8DC288893ED00EAE49B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				E68BA8E22888982200EAE49B /* SF-Pro-Text-Bold.otf */,
 				E68BA8DD2888941000EAE49B /* Quicksand.otf */,
 			);
 			path = Fonts;
@@ -152,6 +155,7 @@
 			files = (
 				E6EE658D288633EF0066C12C /* Preview Assets.xcassets in Resources */,
 				E6EE658A288633EF0066C12C /* Assets.xcassets in Resources */,
+				E68BA8E32888982200EAE49B /* SF-Pro-Text-Bold.otf in Resources */,
 				E68BA8DE2888941000EAE49B /* Quicksand.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,7 +22,7 @@ struct WeatherButton: View {
                 .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)
                 .background(backgroundColor)
                 .foregroundColor(textColor)
-                .font(.quickSand())
+                .font(.bodyBold(with: 40))
                 .cornerRadius(cornerRadius)
                 .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
         }
