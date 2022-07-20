@@ -12,32 +12,39 @@ struct ContentView: View {
     @State private var weatherUi = WeatherUi()
     
     var body: some View {
-        ZStack {
-            BackgroundView(isNight: weatherUi.isNight)
-            VStack {
-                CityNameTextView(name: "Toluca, MX")
-                
-                WeatherImage(spacing: 10,
-                             text: "76°C",
-                             isNight: weatherUi.isNight)
-                
-                HStack(spacing: 20) {
-                    ForEach(weatherUi.isNight ? weatherUi.nightDays : weatherUi.sunnyDays) { day in
-                        WeatherDayView(weatherDayUi: day)
+        ScrollView {
+            ZStack {
+                //BackgroundView(isNight: weatherUi.isNight)
+                VStack {
+                    CityNameTextView(name: "Toluca, MX")
+                    
+                    WeatherImage(spacing: 10,
+                                 text: "76°C",
+                                 isNight: weatherUi.isNight)
+                    
+                    HStack(spacing: 20) {
+                        ForEach(weatherUi.isNight ? weatherUi.nightDays : weatherUi.sunnyDays) { day in
+                            WeatherDayView(weatherDayUi: day)
+                        }
                     }
+                    
+                    Spacer()
+                    
+                    WeatherButton(isNight: $weatherUi.isNight,
+                                  cornerRadius: 10,
+                                  text: "Change 🌪",
+                                  backgroundColor: .white,
+                                  textColor: .gray)
+                    
+                    Spacer(minLength: 32)
                 }
-                
-                Spacer()
-                
-                WeatherButton(isNight: $weatherUi.isNight,
-                              cornerRadius: 10,
-                              text: "Change 🌪",
-                              backgroundColor: .white,
-                              textColor: .gray)
-                
-                Spacer()
             }
         }
+        .background(LinearGradient(gradient: Gradient(colors: [weatherUi.isNight ? .black : .blue,
+                                                               weatherUi.isNight ? .gray : Color("lightBlue")]),
+                                   startPoint: .topLeading,
+                                   endPoint: .bottomTrailing))
+        .ignoresSafeArea()
     }
 }
 
@@ -108,14 +115,14 @@ struct WeatherDayView: View {
                 .foregroundColor(.white)
             
             Image(systemName: weatherDayUi.imageName)
-                //.symbolRenderingMode(.palette)
+            //.symbolRenderingMode(.palette)
                 .symbolRenderingMode(.multicolor)
                 .resizable()
                 .foregroundStyle(.white, .gray, .black)
-                //.aspectRatio(contentMode: .fit)
+            //.aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
                 .clipped()
-                
+            
             
             Text("\(weatherDayUi.temperature)°")
                 .font(.system(size: 28,

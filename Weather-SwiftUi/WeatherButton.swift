@@ -19,11 +19,12 @@ struct WeatherButton: View {
             print("🚀🚀🚀🚀 Hello World 🚀🚀🚀🚀")
         } label: {
             Text(text)
-                .frame(width: 280, height: 50)
+                .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)
                 .background(backgroundColor)
                 .foregroundColor(textColor)
                 .font(.system(size: 20, weight: .bold))
                 .cornerRadius(cornerRadius)
+                .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
         }
     }
 }
