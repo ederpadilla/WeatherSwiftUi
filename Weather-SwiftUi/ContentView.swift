@@ -12,39 +12,37 @@ struct ContentView: View {
     @State private var weatherUi = WeatherUi()
     
     var body: some View {
-        ScrollView {
-            ZStack {
-                //BackgroundView(isNight: weatherUi.isNight)
-                VStack {
-                    CityNameTextView(name: "Toluca, MX")
-                    
-                    WeatherImage(spacing: 10,
-                                 text: "76°C",
-                                 isNight: weatherUi.isNight)
-                    
-                    HStack(spacing: 20) {
-                        ForEach(weatherUi.isNight ? weatherUi.nightDays : weatherUi.sunnyDays) { day in
-                            WeatherDayView(weatherDayUi: day)
+        ZStack {
+            BackgroundView(isNight: weatherUi.isNight)
+                .ignoresSafeArea()
+            ScrollView {
+                ZStack {
+                    VStack {
+                        CityNameTextView(name: "Toluca, MX")
+                        
+                        WeatherImage(spacing: 10,
+                                     text: "76°C",
+                                     isNight: weatherUi.isNight)
+                        
+                        HStack(spacing: 20) {
+                            ForEach(weatherUi.isNight ? weatherUi.nightDays : weatherUi.sunnyDays) { day in
+                                WeatherDayView(weatherDayUi: day)
+                            }
                         }
+                        
+                        Spacer()
+                        
+                        WeatherButton(isNight: $weatherUi.isNight,
+                                      cornerRadius: 10,
+                                      text: "Change 🌪",
+                                      backgroundColor: .supernova,
+                                      textColor: .white)
+                        
+                        Spacer(minLength: 32)
                     }
-                    
-                    Spacer()
-                    
-                    WeatherButton(isNight: $weatherUi.isNight,
-                                  cornerRadius: 10,
-                                  text: "Change 🌪",
-                                  backgroundColor: .supernova,
-                                  textColor: .white)
-                    
-                    Spacer(minLength: 32)
                 }
             }
         }
-        .background(LinearGradient(gradient: Gradient(colors: [weatherUi.isNight ? .black : .blue,
-                                                               weatherUi.isNight ? .gray : Color("lightBlue")]),
-                                   startPoint: .topLeading,
-                                   endPoint: .bottomTrailing))
-        .ignoresSafeArea()
     }
 }
 
