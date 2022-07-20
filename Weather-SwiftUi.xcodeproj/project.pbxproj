@@ -10,6 +10,7 @@
 		E61609A22887275C0099BE18 /* WeatherUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61609A12887275C0099BE18 /* WeatherUi.swift */; };
 		E687034B2886534900BB885D /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E687034A2886534900BB885D /* WeatherButton.swift */; };
 		E68BA8B6288874CE00EAE49B /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68BA8B5288874CE00EAE49B /* Color+Extension.swift */; };
+		E68BA8DE2888941000EAE49B /* Quicksand.otf in Resources */ = {isa = PBXBuildFile; fileRef = E68BA8DD2888941000EAE49B /* Quicksand.otf */; };
 		E6EE6586288633EE0066C12C /* Weather_SwiftUiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE6585288633EE0066C12C /* Weather_SwiftUiApp.swift */; };
 		E6EE6588288633EE0066C12C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE6587288633EE0066C12C /* ContentView.swift */; };
 		E6EE658A288633EF0066C12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EE6589288633EF0066C12C /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 		E61609A12887275C0099BE18 /* WeatherUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUi.swift; sourceTree = "<group>"; };
 		E687034A2886534900BB885D /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherButton.swift; sourceTree = "<group>"; };
 		E68BA8B5288874CE00EAE49B /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		E68BA8DD2888941000EAE49B /* Quicksand.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Quicksand.otf; sourceTree = "<group>"; };
+		E68BA8DF2888942400EAE49B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E6EE6582288633EE0066C12C /* Weather-SwiftUi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather-SwiftUi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EE6585288633EE0066C12C /* Weather_SwiftUiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_SwiftUiApp.swift; sourceTree = "<group>"; };
 		E6EE6587288633EE0066C12C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E68BA8DC288893ED00EAE49B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E68BA8DD2888941000EAE49B /* Quicksand.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		E6EE6579288633ED0066C12C = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +68,8 @@
 		E6EE6584288633EE0066C12C /* Weather-SwiftUi */ = {
 			isa = PBXGroup;
 			children = (
+				E68BA8DF2888942400EAE49B /* Info.plist */,
+				E68BA8DC288893ED00EAE49B /* Fonts */,
 				E6EE6585288633EE0066C12C /* Weather_SwiftUiApp.swift */,
 				E687034A2886534900BB885D /* WeatherButton.swift */,
 				E6EE6587288633EE0066C12C /* ContentView.swift */,
@@ -136,6 +149,7 @@
 			files = (
 				E6EE658D288633EF0066C12C /* Preview Assets.xcassets in Resources */,
 				E6EE658A288633EF0066C12C /* Assets.xcassets in Resources */,
+				E68BA8DE2888941000EAE49B /* Quicksand.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +298,7 @@
 				DEVELOPMENT_TEAM = T2QF3USGP2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Weather-SwiftUi/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -313,6 +328,7 @@
 				DEVELOPMENT_TEAM = T2QF3USGP2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Weather-SwiftUi/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
