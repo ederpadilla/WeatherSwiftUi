@@ -33,8 +33,8 @@ struct ContentView: View {
                     WeatherButton(isNight: $weatherUi.isNight,
                                   cornerRadius: 10,
                                   text: "Change 🌪",
-                                  backgroundColor: .white,
-                                  textColor: .gray)
+                                  backgroundColor: .supernova,
+                                  textColor: .white)
                     
                     Spacer(minLength: 32)
                 }
