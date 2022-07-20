@@ -28,3 +28,19 @@ struct WeatherButton: View {
         }
     }
 }
+
+#if DEBUG
+struct WeatherButton_Previews : PreviewProvider {
+    
+    @State static var isNight = false
+    
+    static var previews: some View {
+        WeatherButton(isNight: $isNight,
+                      cornerRadius: 10,
+                      text: "Hello Motherf*cker",
+                      backgroundColor: .blue,
+                      textColor: .white)
+        
+    }
+}
+#endif
