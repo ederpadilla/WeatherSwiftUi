@@ -24,7 +24,8 @@ struct WeatherButton: View {
                 .foregroundColor(textColor)
                 .font(.bodyBold(with: 40))
                 .cornerRadius(cornerRadius)
-                .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
+                .padding(.leading, 16)
+                .padding(.trailing, 16)
         }
     }
 }
